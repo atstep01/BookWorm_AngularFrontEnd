@@ -88,6 +88,8 @@ This is a list of all large goals I have for BookWorm. This is very much a think
 - Adds the ability to search for a book without necessarily adding it to a wishlist. Gives books a landing page so users can read up on them.
 - Deliverables
    - Add a book search tab to the side bar
+      - Search by title
+      - Search by genre
    - Add a book search page to search for books.
    - Search books with API, when clicked generate a page based on the book info.
    - Change the add book to wishlist flow to also launch a page for a book when clicked
@@ -95,6 +97,14 @@ This is a list of all large goals I have for BookWorm. This is very much a think
    - Add buy button here and remove from wishlist section
 
 ## Phase 10 - Book Discussion Boards
+- Adds ability in book pages to see comments/notes/reviews on the book made by users.
+- Deliverables
+   - Query the database to find all notes/reviews/comments on the book when generating the book page.
+   - Display this information in an easily consumable manor like the ratings system on google play.
+   - Add a questions tab in the book landing page.
+   - Add in ability to like/dislike comments/notes
+   - Add in ability to respond to a comment/note/question.
+   - Add notifications for likes/responses.
 
 ## Phase 11 - Book Recommendations V1
 
