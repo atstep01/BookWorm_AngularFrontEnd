@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { Category } from './wishlist/category-list/category.service';
-import { Book } from './wishlist/book-wishlist/book-wishlist.service';
+import { Category } from '../category-list/category.service';
+import { Book } from './book-wishlist.service';
 
 @Component({
-  selector: 'bw-app',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'bw-book-wishlist-list',
+  templateUrl: './book-wishlist-list.component.html',
+  styleUrls: ['./book-wishlist-list.component.css']
 })
-export class AppComponent {
-  title = 'bookworm';
+export class BookWishlistListComponent {
   actionCategory: Category = {
     id: 0,
     title: "Action"
@@ -37,7 +36,7 @@ export class AppComponent {
     categories: [
       this.actionCategory,
       this.scifiCategory,
-      this.dystopianCategory
+      this.dystopianCategory,
     ]
   };
   book2: Book = {
@@ -61,4 +60,5 @@ export class AppComponent {
   };
 
   books: Book[] = [this.book1, this.book2, this.book3];
+
 }

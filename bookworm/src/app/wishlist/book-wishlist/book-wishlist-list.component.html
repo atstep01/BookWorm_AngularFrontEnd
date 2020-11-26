@@ -1,0 +1,18 @@
+<header>
+  <h1>Wishlist</h1>
+  <p class="description">Books on my radar</p>
+  <bw-category-list
+    *ngIf="books"
+    [categories]="books | categoryList">
+  </bw-category-list>
+</header>
+<section>
+  <bw-book-wishlist
+    *ngFor="let book of books"
+    [book]="book"></bw-book-wishlist>
+</section>
+<footer>
+  <a>
+    <img src="assets/AddButton.png" class="icon">
+  </a>
+</footer>
