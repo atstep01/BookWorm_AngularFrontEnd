@@ -13,7 +13,6 @@ export class CategoryListPipe implements PipeTransform {
           }
        })
     });
-    console.log(categories);
     return categories;
   }
 }
