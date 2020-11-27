@@ -1,0 +1,43 @@
+:host {
+  display: flex;
+  height: calc(100% - 95px);
+  flex-direction: column;
+  padding: 10px;
+}
+nav a {
+  cursor: pointer;
+}
+header {
+  color: #c6c5c3;
+}
+header > h2 {
+  font-size: 1.4em;
+}
+section {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+section > book {
+  margin: 10px;
+}
+header {
+  color: #3D3F4C;
+  padding: 10px;
+}
+header > h1 {
+  font-size: 3em;
+}
+header .description {
+  font-style: italic;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+footer {
+  text-align: right;
+}
+footer .icon {
+  width: 64px;
+  height: 64px;
+}

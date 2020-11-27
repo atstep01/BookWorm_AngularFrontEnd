@@ -1,0 +1,11 @@
+<h2>{{ book.title }}</h2>
+<div>Written by</div>
+<div>{{ book.author }}</div>
+<div class="label"  *ngFor="let category of book.categories">
+  {{ category.title }}
+</div>
+<div class="tools">
+  <a class="details">
+    Buy
+  </a>
+</div>

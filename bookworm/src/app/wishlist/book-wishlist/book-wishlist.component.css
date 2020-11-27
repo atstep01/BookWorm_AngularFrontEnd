@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 200px;
+  border: 2px solid;
+  background-color: #5A3A3F;
+  padding: 10px;
+  color: #E4D9C5;
+  margin: 0 12px 12px 0;
+  border-radius: 25px;
+}
+h2 {
+  font-size: 1.6em;
+  flex: 1;
+}
+.tools {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.details {
+  display: block;
+  background-color: #586E6B;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: .8em;
+  border-radius: 4px;
+  color: #E4D9C5;
+  text-decoration: none;
+}
