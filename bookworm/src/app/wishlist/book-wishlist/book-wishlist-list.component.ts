@@ -16,6 +16,17 @@ export class BookWishlistListComponent implements OnInit {
     this.getBooks('', "wishlisted");
   }
 
+  onBookBuy(book: Book) {
+    book.status = "owned";
+    this.editBookInfo(book);
+    this.getBooks('', "wishlisted");
+  }
+
+  editBookInfo(book: Book) {
+    this.booksService.edit(book)
+      .subscribe()
+  }
+
   getBooks(categoriesId: string, status: string) {
     this.booksService.get(categoriesId, status)
       .subscribe(books => {

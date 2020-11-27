@@ -25,7 +25,14 @@ export class BookService {
   }
 
   add(book: Book) {
-    return this.http.post('books', book)
+    return this.http.post<Book>('books', book)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  edit(book: Book) {
+    return this.http.put<Book>('books', book)
       .pipe(
         catchError(this.handleError)
       );

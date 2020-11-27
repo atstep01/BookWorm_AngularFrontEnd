@@ -97,26 +97,45 @@ export class MockXHRBackend implements HttpBackend {
               status: 200
             };
           }
-          break;
+        break;
 
         case 'POST':
-          const book = request.body;
-          book.id = this._getNewBookId();
-          book.categories.forEach(category => {
+          const new_book = request.body;
+          new_book.id = this._getNewBookId();
+          new_book.categories.forEach(category => {
             if(!this._categoryExists(category))
             {
               category.id = this._getNewCategoryId();
               this.categories.push(category);
             }
           });
-          this.books.push(book);
+          this.books.push(new_book);
           responseOptions = {status: 201};
-          break;
+        break;
+
+        case 'PUT':
+          const book_to_edit = request.body;
+          let found = false;
+          for(const book in this.books) {
+            if(this.books[book].id === book_to_edit.id)
+            {
+              found = true;
+              this.books[book] = book_to_edit;
+              responseOptions = {status: 200};
+            }
+          }
+          if(!found)
+          {
+            responseOptions = {status: 400};
+            console.log("Failed to update book. Book not found");
+          }
+        break;
 
         case 'DELETE':
           const id = parseInt(request.url.split('/')[1], 10);
           this._deleteBook(id);
           responseOptions = {status: 200};
+        break;
       }
 
       const responseObject = new HttpResponse(responseOptions);
