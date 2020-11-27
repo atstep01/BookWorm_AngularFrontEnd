@@ -9,7 +9,8 @@
 <section>
   <bw-book-wishlist
     *ngFor="let book of books"
-    [book]="book"></bw-book-wishlist>
+    [book]="book"
+    (buy)="onBookBuy($event)"></bw-book-wishlist>
 </section>
 <footer>
   <a>

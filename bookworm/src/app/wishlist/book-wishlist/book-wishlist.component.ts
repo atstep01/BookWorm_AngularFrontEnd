@@ -7,9 +7,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BookWishlistComponent {
   @Input() book;
-  @Output() delete = new EventEmitter();
+  @Output() buy = new EventEmitter();
 
-  onDelete() {
-    this.delete.emit(this.book);
+  onBuy() {
+    this.buy.emit(this.book);
   }
 }
